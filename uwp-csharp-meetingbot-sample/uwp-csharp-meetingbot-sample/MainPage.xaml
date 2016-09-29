@@ -1,0 +1,49 @@
+﻿<!-- Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license.
+See LICENSE in the project root for license information. -->
+    <Page
+    x:Class="uwp_csharp_meetingbot_sample.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:uwp_csharp_meetingbot_sample"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" >
+                <TextBlock FontSize="{ThemeResource TextStyleExtraLargeFontSize}" x:Name="Salutation" Margin="10,0,0,40" TextWrapping="Wrap"/>
+                <TextBlock FontSize="{ThemeResource TextStyleExtraLargeFontSize}" x:Name="Message" Margin="10,0,0,40" TextWrapping="Wrap"/>
+                <TextBlock Margin="10,0,0,0" x:Name="MeetingTitle" FontWeight="Bold"/>
+                <TextBlock Margin="10,0,0,0" x:Name="MeetingTimes"/>
+                <ListView FontSize="{ThemeResource TextStyleLargeFontSize}" Visibility="Collapsed" Margin="10,10,0,0" x:Name="Participants">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <TextBlock Text="{Binding EmailAddress.Name}"/>
+                                <TextBlock FontStyle="Italic" Text="{Binding EmailAddress.Address}" Margin="0,0,0,10" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+
+                </ListView>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+
+    <Page.TopAppBar>
+        <CommandBar >
+            <CommandBar.Content>
+                <TextBlock Grid.Row="0" Grid.Column="1" x:Name="appTitle" Text="MeetingBot"
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center" 
+                       TextWrapping="Wrap"
+                       FontSize="{ThemeResource TextStyleLargeFontSize}" Margin="40,0,0,0"
+                       />
+
+            </CommandBar.Content>
+            <AppBarButton Icon="Go" Label="connect" Click="Connect_Click" x:Name="ConnectButton" IsEnabled="False"/>
+            <AppBarButton Icon="Cancel" Label="disconnect" Click="Disconnect_Click" x:Name="DisconnectButton"/>
+        </CommandBar>
+    </Page.TopAppBar>
+</Page>

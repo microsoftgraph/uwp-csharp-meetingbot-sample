@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license.
+See LICENSE in the project root for license information. -->
+
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
+  <CommandSet xml:lang="en-us" Name="MeetingBotCommandSet_en-us">
+    <AppName>MeetingBot</AppName>
+    <Example>Show my next meeting</Example>
+
+    <Command Name="showNextMeeting">
+      <Example> Show my next meeting </Example>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase">{builtin:AppName} show my next meeting</ListenFor>
+      <ListenFor RequireAppName="ExplicitlySpecified">{builtin:AppName} show my next meeting</ListenFor>
+      <Feedback> Showing your next meeting </Feedback>
+      <Navigate />
+    </Command>
+
+
+    <Command Name="lateMeeting">
+      <Example> Tell my next meeting I'm going to be late. </Example>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase">{builtin:AppName} send late meeting message </ListenFor>
+      <ListenFor RequireAppName="ExplicitlySpecified">{builtin:AppName} tell my next meeting I'm going to be late </ListenFor>
+      <Feedback> Sending a "running late" message to your next meeting </Feedback>
+      <Navigate />
+    </Command>
+
+
+  </CommandSet>
+</VoiceCommands>
