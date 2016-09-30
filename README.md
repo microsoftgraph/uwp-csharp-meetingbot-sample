@@ -7,13 +7,16 @@
 * [Prerequisites](#prerequisites)
 * [Register and configure the app](#register)
 * [Build and debug](#build)
+* [Running the sample](#runningsample)
 * [Questions and comments](#questions)
 * [Additional resources](#additional-resources)
 
 <a name="introduction"></a>
 ##Introduction
 
-This sample demonstrates how to integrate Microsoft Graph capabilities into a UWP app that uses Cortana voice commands. It uses the [Microsoft Graph .NET Client Library](https://github.com/microsoftgraph/msgraph-sdk-dotnet) to work with data returned by Microsoft Graph. The sample uses the v2.0 authentication endpoint, which enables users to sign in with either their personal or work or school Microsoft accounts.
+This sample demonstrates how to integrate Microsoft Graph capabilities into a UWP app that uses Cortana voice commands. Once you've installed it and signed in, you can activate it by asking Cortana to show the next meeting on your calendar and/or asking Cortana to tell the participants of your next meeting that you're running late.
+
+It uses the [Microsoft Graph .NET Client Library](https://github.com/microsoftgraph/msgraph-sdk-dotnet) to work with data returned by Microsoft Graph. The sample uses the v2.0 authentication endpoint, which enables users to sign in with either their personal or work or school Microsoft accounts.
 
 <a name="prerequisites"></a>
 ## Prerequisites ##
@@ -47,9 +50,25 @@ This sample requires the following:
 **Note:** If you see any errors while installing packages during step 2, make sure the local path where you placed the solution is not too long/deep. Moving the solution closer to the root of your drive resolves this issue.
 
 1. After you've loaded the solution in Visual Studio, configure the sample to use the application id that you registered by adding the corresponding values for these keys in the Application.Resources node of the App.xaml file.
-![Microsoft Graph MeetingBot sample](/readme-images/appId_and_redirectURI.png "Client ID value in App.xaml file")`
+![Microsoft Graph MeetingBot sample](/readme-images/appId_and_redirectURI.png "App ID value in App.xaml file")
 
 2. Press F5 to build and debug. Run the solution and sign in with either your personal or work or school account.
+
+<a name="runningsample"></a>
+## Running the sample ##
+
+When you first run the sample, you'll be prompted to sign in with your [Microsoft](www.outlook.com) or [Office 365 for business account](https://msdn.microsoft.com/en-us/office/office365/howto/setup-development-environment#bk_Office365Account). After you've authenticated and consented to the required permissions, you won't have to sign in again unless you want to run the sample with another account. 
+
+If you want to sign out and then sign in with a different account, select the **disconnect**  button at the top right of the app and then select the **connect** button to its left.
+
+After you've installed and run the app once, you can activate it at any time by using the issuing the following voice commands to Cortana:
+
+1. "MeetingBot, show me my next meeting."
+2. "MeetingBot, tell my next meeting I'm going to be late."
+
+In both cases, the app will launch and display the title and time frame of your next meeting. If you ask MeetingBot to tell your next meeting that you're going to be late, the app will either confirm that it has sent a "running late" message to your next meeting's participants, or it will tell you that it couldn't find the meeting invitation in your account's mailbox.
+
+![Microsoft Graph MeetingBot sample](/readme-images/MeetingBotLateMessage.png "MeetingBot after sending the running late message")
 
 <a name="contributing"></a>
 ## Contributing ##
