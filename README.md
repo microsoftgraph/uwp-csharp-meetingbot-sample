@@ -61,7 +61,7 @@ When you first run the sample, you'll be prompted to sign in with your [Microsof
 
 If you want to sign out and then sign in with a different account, select the **disconnect**  button at the top right of the app and then select the **connect** button to its left.
 
-After you've installed and run the app once, you can activate it at any time by using the issuing the following voice commands to Cortana:
+After you've installed and run the app once, you can activate it at any time by issuing the following voice commands to Cortana:
 
 1. "MeetingBot, show me my next meeting."
 2. "MeetingBot, tell my next meeting I'm going to be late."
