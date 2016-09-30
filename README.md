@@ -63,7 +63,7 @@ If you want to sign out and then sign in with a different account, select the **
 
 After you've installed and run the app once, you can activate it at any time by issuing the following voice commands to Cortana:
 
-1. "MeetingBot, show me my next meeting."
+1. "MeetingBot, show my next meeting."
 2. "MeetingBot, tell my next meeting I'm going to be late."
 
 In both cases, the app will launch and display the title and time frame of your next meeting. If you ask MeetingBot to tell your next meeting that you're going to be late, the app will either confirm that it has sent a "running late" message to your next meeting's participants, or it will tell you that it couldn't find the meeting invitation in your account's mailbox.
