@@ -12,6 +12,7 @@ See LICENSE in the project root for license information. -->
       <Example> Show my next meeting </Example>
       <ListenFor RequireAppName="BeforeOrAfterPhrase">{builtin:AppName} show my next meeting</ListenFor>
       <ListenFor RequireAppName="ExplicitlySpecified">{builtin:AppName} show my next meeting</ListenFor>
+      <ListenFor RequireAppName="ExplicitlySpecified">ask {builtin:AppName} to show my next meeting</ListenFor>
       <Feedback> Showing your next meeting </Feedback>
       <Navigate />
     </Command>
@@ -21,6 +22,7 @@ See LICENSE in the project root for license information. -->
       <Example> Tell my next meeting I'm going to be late. </Example>
       <ListenFor RequireAppName="BeforeOrAfterPhrase">{builtin:AppName} send late meeting message </ListenFor>
       <ListenFor RequireAppName="ExplicitlySpecified">{builtin:AppName} tell my next meeting I'm going to be late </ListenFor>
+      <ListenFor RequireAppName="ExplicitlySpecified">ask {builtin:AppName} to tell my next meeting I'm going to be late </ListenFor>
       <Feedback> Sending a "running late" message to your next meeting </Feedback>
       <Navigate />
     </Command>
