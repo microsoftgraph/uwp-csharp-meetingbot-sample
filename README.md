@@ -66,6 +66,11 @@ After you've installed and run the app once, you can activate it at any time by 
 1. "MeetingBot, show my next meeting."
 2. "MeetingBot, tell my next meeting I'm going to be late."
 
+If you've enabled the "Hey Cortana" feature, you can activate the app at any time by issuing these voice commands to your device:
+
+1. "Hey Cortana, ask MeetingBot to show my next meeting."
+2. "Hey Cortana, ask MeetingBot to tell my next meeting I'm going to be late."
+
 In both cases, the app will launch and display the title and time frame of your next meeting. If you ask MeetingBot to tell your next meeting that you're going to be late, the app will either confirm that it has sent a "running late" message to your next meeting's participants, or it will tell you that it couldn't find the meeting invitation in your account's mailbox.
 
 ![Microsoft Graph MeetingBot sample](/readme-images/MeetingBotLateMessage.png "MeetingBot after sending the running late message")
