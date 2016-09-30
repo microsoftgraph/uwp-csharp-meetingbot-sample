@@ -66,7 +66,7 @@ After you've installed and run the app once, you can activate it at any time by 
 1. "MeetingBot, show my next meeting."
 2. "MeetingBot, tell my next meeting I'm going to be late."
 
-If you've enabled the "Hey Cortana" feature, you can activate the app at any time by issuing these voice commands to your device:
+If you've [enabled the "Hey Cortana" feature](https://www.cnet.com/how-to/how-to-enable-hey-cortana-on-windows-10/), you can activate the app at any time by issuing these voice commands to your device:
 
 1. "Hey Cortana, ask MeetingBot to show my next meeting."
 2. "Hey Cortana, ask MeetingBot to tell my next meeting I'm going to be late."
