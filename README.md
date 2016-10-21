@@ -38,7 +38,7 @@ This sample requires the following:
  
 4. Under **Platforms**, select **Add platform**.
 5. Select **Mobile platform**.
-6. Copy both the App Id to the clipboard. You'll need to enter this value into the sample app.
+6. Copy the Application Id to the clipboard. You'll need to enter this value into the sample app.
 
 	The app id is a unique identifier for your app. The redirect URI is a unique URI provided by Windows 10 for each application to ensure that messages sent to that URI are only sent to that application. 
 
