@@ -12,7 +12,7 @@
 * [Additional resources](#additional-resources)
 
 <a name="introduction"></a>
-##Introduction
+## Introduction
 
 This sample demonstrates how to integrate Microsoft Graph capabilities into a UWP app that uses Cortana voice commands. Once you've installed it and signed in, you can activate it by asking Cortana to show the next meeting on your calendar and/or asking Cortana to tell the participants of your next meeting that you're running late.
 
@@ -28,7 +28,7 @@ This sample requires the following:
   * Either a [Microsoft](www.outlook.com) or [Office 365 for business account](https://msdn.microsoft.com/en-us/office/office365/howto/setup-development-environment#bk_Office365Account).
 
 <a name="register"></a>
-##Register and configure the app
+## Register and configure the app
 
 1. Sign into the [App Registration Portal](https://apps.dev.microsoft.com/) using either your personal or work or school account.
 2. Select **Add an app**.
