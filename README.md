@@ -1,4 +1,4 @@
-# Microsoft Graph MeetingBot sample for UWP
+ # Microsoft Graph MeetingBot sample for UWP
 
 
 **Table of contents**
@@ -28,7 +28,7 @@ This sample requires the following:
   * Either a [Microsoft](www.outlook.com) or [Office 365 for business account](https://msdn.microsoft.com/en-us/office/office365/howto/setup-development-environment#bk_Office365Account).
 
 <a name="register"></a>
-##Register and configure the app
+## Register and configure the app
 
 1. Sign into the [App Registration Portal](https://apps.dev.microsoft.com/) using either your personal or work or school account.
 2. Select **Add an app**.
