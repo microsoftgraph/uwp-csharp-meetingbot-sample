@@ -1,4 +1,4 @@
- # Microsoft Graph MeetingBot sample for UWP
+# Microsoft Graph MeetingBot sample for UWP
 
 
 **Table of contents**
@@ -12,7 +12,7 @@
 * [Additional resources](#additional-resources)
 
 <a name="introduction"></a>
-##Introduction
+## Introduction
 
 This sample demonstrates how to integrate Microsoft Graph capabilities into a UWP app that uses Cortana voice commands. Once you've installed it and signed in, you can activate it by asking Cortana to show the next meeting on your calendar and/or asking Cortana to tell the participants of your next meeting that you're running late.
 
