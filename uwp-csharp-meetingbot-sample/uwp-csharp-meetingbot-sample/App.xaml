@@ -10,7 +10,7 @@ See LICENSE in the project root for license information. -->
 
     <Application.Resources>
         <!-- Add your application id here. -->
-        <x:String x:Key="ida:ClientID">424b1dcf-43e7-43f7-9057-0a1ebaeee0b3</x:String>
+        <x:String x:Key="ida:ClientID"></x:String>
         <x:String x:Key="ida:ReturnUrl">urn:ietf:wg:oauth:2.0:oob</x:String>
     </Application.Resources>
 
