@@ -13,6 +13,7 @@ using Windows.Security.Credentials;
 using Windows.Storage;
 using Microsoft.Graph;
 using Microsoft.Identity.Client;
+using System.Collections.Generic;
 
 namespace uwp_csharp_meetingbot_sample
 {
@@ -23,9 +24,6 @@ namespace uwp_csharp_meetingbot_sample
         public static string[] Scopes = { "User.Read", "Mail.Send", "Calendars.Read", "Mail.ReadWrite" };
 
         public static PublicClientApplication IdentityClientApp = new PublicClientApplication(clientId);
-
-        public static string TokenForUser = null;
-        public static DateTimeOffset Expiration;
 
         private static GraphServiceClient graphClient = null;
 
@@ -60,7 +58,6 @@ namespace uwp_csharp_meetingbot_sample
             return graphClient;
         }
 
-
         /// <summary>
         /// Get Token for User.
         /// </summary>
@@ -68,38 +65,33 @@ namespace uwp_csharp_meetingbot_sample
         public static async Task<string> GetTokenForUserAsync()
         {
             AuthenticationResult authResult;
+            IEnumerable<IAccount> accounts = await IdentityClientApp.GetAccountsAsync();
+            IAccount firstAccount = accounts.FirstOrDefault();
             try
             {
-                authResult = await IdentityClientApp.AcquireTokenSilentAsync(Scopes);
-                TokenForUser = authResult.Token;
+                authResult = await IdentityClientApp.AcquireTokenSilentAsync(Scopes, firstAccount);
             }
-
-            catch (Exception)
+            catch (MsalUiRequiredException)
             {
-                if (TokenForUser == null || Expiration <= DateTimeOffset.UtcNow.AddMinutes(5))
-                {
-                    authResult = await IdentityClientApp.AcquireTokenAsync(Scopes);
-
-                    TokenForUser = authResult.Token;
-                    Expiration = authResult.ExpiresOn;
-                }
+                authResult = await IdentityClientApp.AcquireTokenAsync(Scopes);
             }
 
-            return TokenForUser;
+            return authResult.AccessToken;
         }
 
         /// <summary>
         /// Signs the user out of the service.
         /// </summary>
-        public static void SignOut()
+        public static async void SignOut()
         {
-            foreach (var user in IdentityClientApp.Users)
-            {
-                user.SignOut();
-            }
-            graphClient = null;
-            TokenForUser = null;
+            IEnumerable<IAccount> accounts = await IdentityClientApp.GetAccountsAsync();
 
+            foreach (var account in accounts.ToArray())
+            {
+                await IdentityClientApp.RemoveAsync(account);
+            }
+
+            graphClient = null;
         }
 
     }
