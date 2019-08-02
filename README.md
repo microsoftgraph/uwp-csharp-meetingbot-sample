@@ -1,3 +1,19 @@
+---
+page_type: sample
+products:
+- office-outlook
+- ms-graph
+languages:
+- csharp
+- windows-uwp
+extensions:
+  contentType: samples
+  technologies:
+  - Microsoft Graph
+  services:
+  - Outlook
+  createdDate: 9/28/2016 4:33:07 PM
+---
 # Microsoft Graph MeetingBot sample for UWP
 
 ## Table of contents
