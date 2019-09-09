@@ -9,7 +9,7 @@ languages:
 extensions:
   contentType: samples
   technologies:
-  - Microsoft Graph
+  - Microsoft Graph 
   services:
   - Outlook
   createdDate: 9/28/2016 4:33:07 PM
