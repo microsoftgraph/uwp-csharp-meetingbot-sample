@@ -1,20 +1,10 @@
----
-page_type: sample
-products:
-- office-outlook
-- ms-graph
-languages:
-- csharp
-- windows-uwp
-extensions:
-  contentType: samples
-  technologies:
-  - Microsoft Graph 
-  services:
-  - Outlook
-  createdDate: 9/28/2016 4:33:07 PM
----
-# Microsoft Graph MeetingBot sample for UWP
+# [ARCHIVED] Microsoft Graph MeetingBot sample for UWP
+
+## IMPORTANT
+
+**This project is being archived. As part of the archival process, we're closing all open issues and pull requests.**
+
+**You can continue to use this sample "as-is", but it won't be maintained moving forward. We apologize for any inconvenience.**
 
 ## Table of contents
 
